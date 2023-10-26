@@ -29,8 +29,8 @@ body {
 }
 
 .pokedex {
-  width: 600px;
-  background-color: red;
+  width: 550px;
+  background-color: #dd082f;
   border-radius: 10px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -39,8 +39,8 @@ body {
 }
 
 .top {
-  background-color: #f00;
-  padding: 90px;
+  background-color: #dd082f;
+  padding: 80px;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   position: relative;
@@ -74,30 +74,29 @@ body {
 }
 
 .search {
-  background-color: #f00;
+  background-color: #dd082f;
   padding: 20px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -20px;
 }
 
 input[type="text"] {
-  width: 70%; /* Ajustar el ancho según tus necesidades */
-  padding: 5px;
-  border: none; /* Elimina el borde predeterminado */
-  border-bottom: 2px solid yellow; /* Agregar el borde inferior amarillo */
-  background-color: yellow;
+  width: 70%;
+  padding: 8px;
+  border: none;
+  background-color: #e3bd25;
   border-radius: 5px;
-
-  /* Añadir estas líneas */
   font-size: 1.2rem;
   font-weight: bold;
+  margin-top: -20px;
 }
 
 .Buscar {
-  background-color: rgb(193, 57, 33);
+  background-color: #c63939;
   color: #fff;
   padding: 5px 10px;
   border: none;
@@ -106,7 +105,9 @@ input[type="text"] {
   height: 40px;
   margin-left: 10px;
   cursor: pointer;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-top: -20px;
+  background-image: radial-gradient(#ffd8d8, #890707);
 }
 
 /* Que los color bottons sean circulares */
@@ -151,15 +152,19 @@ input[type="text"] {
   background-color: #01fbfb; /* Color del botón azul, ajusta según sea necesario */
   color: #fff;
   border: none;
-  width: 90px; /* Ancho más grande */
-  height: 90px; /* Alto más grande */
+  width: 70px; /* Ancho más grande */
+  height: 70px; /* Alto más grande */
   cursor: pointer;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   border: 2px solid #000;
 }
 
+.yellow-button {
+  background-color: #ffcc02;
+}
+
 .back-case {
-  width: 600px;
+  width: 550px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
@@ -167,13 +172,51 @@ input[type="text"] {
   flex-direction: column;
   text-align: center;
   margin-left: 1%;
+  position: relative;
 }
 
 .topv2 {
-  background-color: #f00;
+  background-color: #dd082f;
   padding: 300px;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   position: relative;
   height: 90px;
+}
+
+.strong-blue-button {
+  background-color: #519afb;
+  /* Ciruclar button */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  /* Borde negro alrededor */
+  border: 2px solid black;
+}
+
+.green-large-button {
+  background-color: #0f0;
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.yellow-large-button {
+  background-color: #ffcc02;
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.color-buttons-down {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  top: -50px;
+  left: 85px;
+  gap: 10px;
 }
