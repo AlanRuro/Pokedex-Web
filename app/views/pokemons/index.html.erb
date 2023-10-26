@@ -1,6 +1,9 @@
 
 <body>
 <div class="container">
+<div class="pokeball-container">
+  <%= image_tag("Pokeball.png", alt: "Pokeball", class: "pokeball") %>
+</div>
     <div class="pokedex">
       <div class="top">
         <div class="color-buttons">
@@ -38,3 +41,17 @@
 </ul>
 
 </body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const pokeballContainer = document.querySelector(".pokeball-container");
+
+  pokeballContainer.style.display = "flex";
+
+  setTimeout(function () {
+    pokeballContainer.style.display = "none";
+  }, 1500);
+});
+
+</script>
+
