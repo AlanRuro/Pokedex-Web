@@ -100,8 +100,8 @@ input[type="text"] {
   color: #fff;
   padding: 5px 10px;
   border: none;
-  border-radius: 50%; /* Hacer el botón circular */
-  width: 40px; /* Ajustar el ancho y el alto según tus necesidades */
+  border-radius: 50%;
+  width: 40px;
   height: 40px;
   margin-left: 10px;
   cursor: pointer;
@@ -110,15 +110,13 @@ input[type="text"] {
   background-image: radial-gradient(#ffd8d8, #890707);
 }
 
-/* Que los color bottons sean circulares */
 .color-buttons {
   display: flex;
   gap: 20px;
-  position: relative; /* Establece el contenedor padre como posición relativa */
+  position: relative;
   top: -50px;
-  left: -25px; /* Ajusta la posición izquierda del contenedor padre según sea necesario */
+  left: -25px;
   gap: 10px;
-  /* Colocar shadow alrededor */
 }
 
 .red-button,
@@ -134,7 +132,6 @@ input[type="text"] {
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-  /* Borde negro alrededor */
   border: 2px solid black;
 }
 
@@ -149,11 +146,11 @@ input[type="text"] {
 }
 
 .blue-button {
-  background-color: #01fbfb; /* Color del botón azul, ajusta según sea necesario */
+  background-color: #01fbfb;
   color: #fff;
   border: none;
-  width: 70px; /* Ancho más grande */
-  height: 70px; /* Alto más grande */
+  width: 70px;
+  height: 70px;
   cursor: pointer;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   border: 2px solid #000;
@@ -219,4 +216,15 @@ input[type="text"] {
   top: -50px;
   left: 85px;
   gap: 10px;
+}
+
+.screenv2 {
+  background-color: #ffffff;
+  border: 10px solid #4f44443c;
+  border-radius: 5px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  left: 20px;
+  bottom: 20px;
 }
