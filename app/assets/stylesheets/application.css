@@ -13,3 +13,167 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  margin: 0;
+}
+
+.container {
+  background-color: #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.pokedex {
+  width: 600px;
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.top {
+  background-color: #f00;
+  padding: 90px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  position: relative;
+}
+
+.screen {
+  background-color: #ffffff;
+  height: 350px;
+  border: 10px solid #b0b0b0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  background-color: #000;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.search {
+  background-color: #f00;
+  padding: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 70%; /* Ajustar el ancho según tus necesidades */
+  padding: 5px;
+  border: none; /* Elimina el borde predeterminado */
+  border-bottom: 2px solid yellow; /* Agregar el borde inferior amarillo */
+  background-color: yellow;
+  border-radius: 5px;
+
+  /* Añadir estas líneas */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.Buscar {
+  background-color: rgb(193, 57, 33);
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50%; /* Hacer el botón circular */
+  width: 40px; /* Ajustar el ancho y el alto según tus necesidades */
+  height: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Que los color bottons sean circulares */
+.color-buttons {
+  display: flex;
+  gap: 20px;
+  position: relative; /* Establece el contenedor padre como posición relativa */
+  top: -50px;
+  left: -25px; /* Ajusta la posición izquierda del contenedor padre según sea necesario */
+  gap: 10px;
+  /* Colocar shadow alrededor */
+}
+
+.red-button,
+.green-button,
+.blue-button,
+.yellow-button {
+  top: 50px;
+  left: 50px;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  /* Borde negro alrededor */
+  border: 2px solid black;
+}
+
+.red-button {
+  background-color: rgb(27, 180, 222);
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.green-button {
+  background-color: #0f0;
+}
+
+.blue-button {
+  background-color: #01fbfb; /* Color del botón azul, ajusta según sea necesario */
+  color: #fff;
+  border: none;
+  width: 90px; /* Ancho más grande */
+  height: 90px; /* Alto más grande */
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  border: 2px solid #000;
+}
+
+.back-case {
+  width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 1%;
+}
+
+.topv2 {
+  background-color: #f00;
+  padding: 300px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  position: relative;
+  height: 90px;
+}
