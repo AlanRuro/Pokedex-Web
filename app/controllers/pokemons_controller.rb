@@ -6,12 +6,18 @@ class PokemonsController < ApplicationController
   end
 
   def show
-    if Pokemon.find_by(name: params[:id])
-      @pokemon = Pokemon.find_by(name: params[:id])
+    if params[:name]
+      @pokemon = Pokemon.find_by(name: params[:name])
+      redirect_to pokemon_path(@pokemon.name)
     else
-      pokemon = ::PokemonSupport::PokemonClient.pokemon_by_name(params[:id])
-      @pokemon = Pokemon.new(pokemon)
-      @pokemon.save
+      if Pokemon.find_by(name: params[:id])
+        @pokemon = Pokemon.find_by(name: params[:id])
+      else
+        pokemon = ::PokemonSupport::PokemonClient.pokemon_by_name(params[:id])
+        @pokemon = Pokemon.new(pokemon)
+        @pokemon.save
+      end
     end
   end
+  
 end
