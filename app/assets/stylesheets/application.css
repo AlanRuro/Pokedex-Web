@@ -192,6 +192,16 @@ input[type="text"] {
   height: 30px;
   border-radius: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.green-large-button:hover {
+  background-color: rgb(
+    2,
+    125,
+    2
+  ); /* Cambiar el color cuando se pasa el mouse */
+  cursor: pointer;
 }
 
 .yellow-large-button {
@@ -200,10 +210,12 @@ input[type="text"] {
   height: 30px;
   border-radius: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .yellow-large-button:hover {
-  background-color: #dd082f;
+  background-color: #a48403; /* Cambiar el color cuando se pasa el mouse */
+  cursor: pointer;
 }
 
 .color-buttons-down {
@@ -255,6 +267,15 @@ input[type="text"] {
 }
 
 .no-bullets {
-  list-style-type: none; 
-  padding: 0; 
+  list-style-type: none;
+  padding: 0;
+}
+
+.pokeballGif {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
