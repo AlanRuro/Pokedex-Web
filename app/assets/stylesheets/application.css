@@ -1,4 +1,3 @@
-
 html,
 body {
   overflow: hidden;
@@ -196,11 +195,7 @@ input[type="text"] {
 }
 
 .green-large-button:hover {
-  background-color: rgb(
-    2,
-    125,
-    2
-  ); /* Cambiar el color cuando se pasa el mouse */
+  background-color: rgb(2, 125, 2);
   cursor: pointer;
 }
 
@@ -214,7 +209,7 @@ input[type="text"] {
 }
 
 .yellow-large-button:hover {
-  background-color: #a48403; /* Cambiar el color cuando se pasa el mouse */
+  background-color: #a48403;
   cursor: pointer;
 }
 
@@ -266,9 +261,21 @@ input[type="text"] {
   }
 }
 
+@font-face {
+  font-family: "Pokemon-Like";
+  src: url("PixelifySans-VariableFont_wght.ttf") format("truetype");
+}
+
 .no-bullets {
   list-style-type: none;
   padding: 0;
+  font-family: "Pokemon-Like", sans-serif;
+  font-size: large;
+}
+
+.pokemon-name {
+  font-family: "Pokemon-Like", sans-serif;
+  font-size: xx-large;
 }
 
 .pokeballGif {
@@ -278,4 +285,9 @@ input[type="text"] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.pokemon-image {
+  width: 45%;
+  height: 45%;
 }
