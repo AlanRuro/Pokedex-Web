@@ -1,6 +1,6 @@
 <%= content_for :screen do %>
     <h1 class="pokemon-name"><%= @pokemon.name.capitalize %></h1>
-    <img src=<%= @pokemon.image %> class="" />
+    <img src=<%= @pokemon.image %> class = "pokemon-image-moves" />
 <% end %>
 <%= content_for :buttons do %>
     <%= form_with(url: pokemon_path(@pokemon.name), method: :get) do |form| %>

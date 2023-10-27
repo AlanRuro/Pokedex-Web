@@ -7,5 +7,8 @@
     <button class="yellow-large-button" />
 <% end %>
 <%= content_for :moves do %>
+    <div class="logo-container">
+        <%= image_tag("pokemon_logo_v3.webp", alt: "Logo", class: "rotated-image") %>
+    </div>
 <% end %>
 <%= render "pokedex" %>

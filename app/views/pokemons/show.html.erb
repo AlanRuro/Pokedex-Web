@@ -26,5 +26,9 @@
 
 <% end %>
 <%= content_for :moves do %>
-<% end %>
-<%= render "pokedex" %>
+    <div class="logo-container">
+        <%= image_tag("pokemon_logo_v3.webp", alt: "Logo", class: "rotated-image") %>
+    </div>
+  <% end %>
+  <%= render "pokedex" %>
+  
