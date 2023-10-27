@@ -195,11 +195,7 @@ input[type="text"] {
 }
 
 .green-large-button:hover {
-  background-color: rgb(
-    2,
-    125,
-    2
-  ); /* Cambiar el color cuando se pasa el mouse */
+  background-color: rgb(2, 125, 2);
   cursor: pointer;
 }
 
@@ -213,7 +209,7 @@ input[type="text"] {
 }
 
 .yellow-large-button:hover {
-  background-color: #a48403; /* Cambiar el color cuando se pasa el mouse */
+  background-color: #a48403;
   cursor: pointer;
 }
 
@@ -292,6 +288,6 @@ input[type="text"] {
 }
 
 .pokemon-image {
-  width: 160px;
-  height: 160px;
+  width: 45%;
+  height: 45%;
 }
