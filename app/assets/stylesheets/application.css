@@ -76,15 +76,21 @@ body {
   margin-top: -20px;
 }
 
+@font-face {
+  font-family: "Pokemon-Like";
+  src: url("PixelifySans-VariableFont_wght.ttf") format("truetype");
+}
+
 input[type="text"] {
   width: 70%;
   padding: 8px;
   border: none;
   background-color: #e3bd25;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: -20px;
+  font-family: "Pokemon-Like", sans-serif;
 }
 
 .Buscar {
@@ -148,6 +154,11 @@ input[type="text"] {
   border: 2px solid #000;
 }
 
+.blue-button:hover {
+  background-color: #0c6c6c;
+  transition: background-color 0.3s ease-in-out;
+}
+
 .yellow-button {
   background-color: #ffcc02;
 }
@@ -182,7 +193,12 @@ input[type="text"] {
   cursor: pointer;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   /* Borde negro alrededor */
-  border: 2px solid black;
+  border: 1.5px solid rgb(40, 36, 36);
+}
+
+.strong-blue-button:hover {
+  background-color: #2c5c9b;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .green-large-button {
@@ -247,9 +263,9 @@ input[type="text"] {
 }
 
 .pokeball {
-  width: 200px; /* Ajusta el tamaño según tus necesidades */
-  height: 200px; /* Ajusta el tamaño según tus necesidades */
-  animation: spin 1.5s linear infinite; /* Añade una animación de rotación */
+  width: 200px;
+  height: 200px;
+  animation: spin 1.5s linear infinite;
 }
 
 @keyframes spin {
@@ -259,11 +275,6 @@ input[type="text"] {
   100% {
     transform: rotate(360deg);
   }
-}
-
-@font-face {
-  font-family: "Pokemon-Like";
-  src: url("PixelifySans-VariableFont_wght.ttf") format("truetype");
 }
 
 .no-bullets {
