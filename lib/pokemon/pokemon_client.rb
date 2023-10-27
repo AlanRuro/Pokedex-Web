@@ -25,5 +25,22 @@ module PokemonSupport
             pokemons = JSON.parse(pokemon_types.to_json).with_indifferent_access.slice :pokemon
             pokemons[:pokemon].map { |element| element[:pokemon][:name] }
         end
+
+        def self.move_by_name(name)
+            move_details = PokeApi.get(move: name)
+            move_object = JSON.parse(move_details.to_json).with_indifferent_access
+            move = {
+                name: move_object[:name],
+                power: move_object[:power],
+                description: move_object[:effect_entries][0][:short_effect],
+                category: move_object[:type][:name]
+            }
+        end
+
+        def self.moves_by_pokemon(name)
+            pokemon_details = PokeApi.get(pokemon: name)
+            pokemon = JSON.parse(pokemon_details.to_json).with_indifferent_access.slice :moves
+            pokemon[:moves].take(3).map { |element| move_by_name(element[:move][:name]) }
+        end
     end
 end

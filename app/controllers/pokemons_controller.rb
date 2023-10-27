@@ -4,7 +4,10 @@ class PokemonsController < ApplicationController
   def index
     @pokemon = Pokemon.new
     if params[:name]
-      render 'show'
+      pokemon = ::PokemonSupport::PokemonClient.pokemon_by_name(params[:name])
+      @pokemon = Pokemon.new(pokemon)
+      @pokemon.save
+      redirect_to pokemon_path(@pokemon.name)
     end
   end
 
