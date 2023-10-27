@@ -293,8 +293,8 @@ input[type="text"] {
 }
 
 .pokemon-image-moves {
-  width: 60%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
 }
 
 .rotated-image {
@@ -307,5 +307,5 @@ input[type="text"] {
 
 .move {
   font-family: "Pokemon-Like", sans-serif;
-  font-size: large;
+  font-size: medium;
 }

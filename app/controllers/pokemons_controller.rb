@@ -2,11 +2,14 @@ require 'pokemon/pokemon_client'
 
 class PokemonsController < ApplicationController
   def index
-    @pokemon = Pokemon.new
     if params[:name]
-      pokemon = ::PokemonSupport::PokemonClient.pokemon_by_name(params[:name])
-      @pokemon = Pokemon.new(pokemon)
-      @pokemon.save
+      if Pokemon.find_by(name: params[:name])
+        @pokemon = Pokemon.find_by(name: params[:name])
+      else
+        pokemon = ::PokemonSupport::PokemonClient.pokemon_by_name(params[:name])
+        @pokemon = Pokemon.new(pokemon)
+        @pokemon.save
+      end
       redirect_to pokemon_path(@pokemon.name)
     end
   end

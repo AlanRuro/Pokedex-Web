@@ -20,7 +20,7 @@
 
     <%= form_with(method: :get) do |form| %>
         <%= form.hidden_field :contiguious, value: params[:id] %>
-        <%= form.hidden_field :difference, value: -1 %>
+        <%= form.hidden_field :difference, value: 1 %>
         <%= form.submit "", class: "yellow-large-button" %>
     <% end %>
 
