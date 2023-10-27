@@ -1,0 +1,61 @@
+
+<body>
+<div class="container">
+<div class="pokeball-container">
+  <%= image_tag("Pokeball.png", alt: "Pokeball", class: "pokeball") %>
+</div>
+    <div class="pokedex">
+      <div class="top">
+        <div class="color-buttons">
+        <button class="blue-button"></button>
+        <button class="red-button"></button>
+        <button class="green-button"></button>
+        <button class="yellow-button"></button>
+      </div>
+        <div class="screen">
+            <% if show_content %>
+                <h1><%= pokemon.name %></h1>
+                <img src=<%= pokemon.image %> />
+                <ul class="no-bullets">
+                    <li>Height <%= pokemon.height %> </li>
+                    <li>Weight <%= pokemon.weight %> </li>
+                    <li>Base Experience <%= pokemon.base_experience %> </li>
+                </ul>
+            <% else %>
+            <% end %>
+        </div>
+      </div>
+        <div class="color-buttons-down">
+          <button class="strong-blue-button"></button>
+          <button class="green-large-button"></button>
+          <button class="yellow-large-button"></button>
+        </div>
+
+      <%= form_with(method: :get) do |form| %>
+      <div class="search">
+        <%= form.text_field :name, placeholder: "Find Pokemon" %>
+        <%= form.submit "Buscar", class: "Buscar" %>
+      </div>
+      <% end %>
+
+    </div>
+    <div class="back-case">
+      <div class="topv2">
+        <div class="screenv2"></div>
+      </div>
+    
+    </div>
+  </div>
+
+
+<script>
+  pokeballContainer = document.querySelector(".pokeball-container");
+
+  pokeballContainer.style.display = "flex";
+
+  setTimeout(function () {
+    pokeballContainer.style.display = "none";
+  }, 1500);
+</script>
+
+</body>
