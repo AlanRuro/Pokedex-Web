@@ -296,3 +296,16 @@ input[type="text"] {
   width: 60%;
   height: 60%;
 }
+
+.rotated-image {
+  transform: rotate(90deg);
+  width: 90%;
+  position: relative;
+  left: 20px;
+  top: 200px;
+}
+
+.move {
+  font-family: "Pokemon-Like", sans-serif;
+  font-size: large;
+}
