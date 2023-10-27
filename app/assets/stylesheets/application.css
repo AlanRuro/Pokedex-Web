@@ -76,15 +76,21 @@ body {
   margin-top: -20px;
 }
 
+@font-face {
+  font-family: "Pokemon-Like";
+  src: url("PixelifySans-VariableFont_wght.ttf") format("truetype");
+}
+
 input[type="text"] {
   width: 70%;
   padding: 8px;
   border: none;
   background-color: #e3bd25;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: -20px;
+  font-family: "Pokemon-Like", sans-serif;
 }
 
 .Buscar {
@@ -257,9 +263,9 @@ input[type="text"] {
 }
 
 .pokeball {
-  width: 200px; /* Ajusta el tamaño según tus necesidades */
-  height: 200px; /* Ajusta el tamaño según tus necesidades */
-  animation: spin 1.5s linear infinite; /* Añade una animación de rotación */
+  width: 200px;
+  height: 200px;
+  animation: spin 1.5s linear infinite;
 }
 
 @keyframes spin {
@@ -269,11 +275,6 @@ input[type="text"] {
   100% {
     transform: rotate(360deg);
   }
-}
-
-@font-face {
-  font-family: "Pokemon-Like";
-  src: url("PixelifySans-VariableFont_wght.ttf") format("truetype");
 }
 
 .no-bullets {
