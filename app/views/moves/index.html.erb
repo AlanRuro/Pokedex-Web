@@ -1,12 +1,10 @@
 <%= content_for :screen do %>
-    <h1><%= @pokemon.name %></h1>
-    <img src=<%= @pokemon.image %> />
+    <h1 class="pokemon-name"><%= @pokemon.name.capitalize %></h1>
+    <img src=<%= @pokemon.image %> class="" />
 <% end %>
 <%= content_for :buttons do %>
     <%= form_with(url: pokemon_path(@pokemon.name), method: :get) do |form| %>
-        <div class="search">
             <%= form.submit "", class: "strong-blue-button" %>
-        </div>
     <% end %>
     <button class="green-large-button" />
     <button class="yellow-large-button" />

@@ -1,5 +1,5 @@
 <%= content_for :screen do %>
-    <h1 class="pokemon-name"><%= @pokemon.name %></h1>
+    <h1 class="pokemon-name"><%= @pokemon.name.capitalize %></h1>
     <img src=<%= @pokemon.image %>  class="pokemon-image" />
     <ul class="no-bullets">
         <li>Height: <%= @pokemon.height %> </li>
@@ -9,29 +9,22 @@
 <% end %>
 <%= content_for :buttons do %>
     <%= form_with(url: pokemon_moves_path(@pokemon.name), method: :get) do |form| %>
-        <div class="search">
-            <%= form.submit "", class: "strong-blue-button" %>
-        </div>
+        <%= form.submit "", class: "strong-blue-button" %>
     <% end %>
 
     <%= form_with(method: :get) do |form| %>
-        <div class="search">
-            <%= form.hidden_field :contiguious, value: params[:id] %>
-            <%= form.hidden_field :difference, value: -1 %>
-            <%= form.submit "", class: "green-large-button" %>
-        </div>
+        <%= form.hidden_field :contiguious, value: params[:id] %>
+        <%= form.hidden_field :difference, value: -1 %>
+        <%= form.submit "", class: "green-large-button" %>
     <% end %>
 
     <%= form_with(method: :get) do |form| %>
-        <div class="search">
-            <%= form.hidden_field :contiguious, value: params[:id] %>
-            <%= form.hidden_field :difference, value: -1 %>
-            <%= form.submit "", class: "yellow-large-button" %>
-        </div>
+        <%= form.hidden_field :contiguious, value: params[:id] %>
+        <%= form.hidden_field :difference, value: -1 %>
+        <%= form.submit "", class: "yellow-large-button" %>
     <% end %>
 
 <% end %>
 <%= content_for :moves do %>
-    <h1>Moves</h1>
 <% end %>
 <%= render "pokedex" %>

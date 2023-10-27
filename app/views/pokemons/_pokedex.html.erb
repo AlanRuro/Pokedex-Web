@@ -7,7 +7,9 @@
     <div class="pokedex">
       <div class="top">
         <div class="color-buttons">
-        <button class="blue-button"></button>
+        <%= form_with(url: root_path, method: :get) do |form| %>
+            <%= form.submit "", class: "blue-button" %>
+        <% end %>
         <button class="green-button"></button>
         <button class="red-button"></button>
         <button class="yellow-button"></button>
