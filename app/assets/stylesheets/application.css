@@ -148,6 +148,11 @@ input[type="text"] {
   border: 2px solid #000;
 }
 
+.blue-button:hover {
+  background-color: #0c6c6c;
+  transition: background-color 0.3s ease-in-out;
+}
+
 .yellow-button {
   background-color: #ffcc02;
 }
@@ -182,7 +187,12 @@ input[type="text"] {
   cursor: pointer;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   /* Borde negro alrededor */
-  border: 2px solid black;
+  border: 1.5px solid rgb(40, 36, 36);
+}
+
+.strong-blue-button:hover {
+  background-color: #2c5c9b;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .green-large-button {
