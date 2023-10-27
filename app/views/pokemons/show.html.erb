@@ -1,10 +1,10 @@
 <%= content_for :screen do %>
-    <h1><%= @pokemon.name %></h1>
-    <img src=<%= @pokemon.image %> />
+    <h1 class="pokemon-name"><%= @pokemon.name %></h1>
+    <img src=<%= @pokemon.image %>  class="pokemon-image" />
     <ul class="no-bullets">
-        <li>Height <%= @pokemon.height %> </li>
-        <li>Weight <%= @pokemon.weight %> </li>
-        <li>Base Experience <%= @pokemon.base_experience %> </li>
+        <li>Height: <%= @pokemon.height %> </li>
+        <li>Weight: <%= @pokemon.weight %> </li>
+        <li>Base Experience: <%= @pokemon.base_experience %> </li>
     </ul>
 <% end %>
 <%= content_for :buttons do %>
