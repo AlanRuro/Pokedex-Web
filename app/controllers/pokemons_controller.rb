@@ -2,14 +2,20 @@ require 'pokemon/pokemon_client'
 
 class PokemonsController < ApplicationController
   def index
+    @pokemon = Pokemon.new
     if params[:name]
-      show()
+      render 'show'
     end
-    @pokemons = Pokemon.new
   end
 
   def show
-    pokemon_name = params[:name] ? params[:name] : params[:id]
+    if params[:contiguious]
+      pokemon_name = ::PokemonSupport::PokemonClient.id_by_name(params[:contiguious]) + params[:difference].to_i
+    elsif params[:name]
+      pokemon_name = params[:name]
+    else
+      pokemon_name = params[:id]
+    end
 
     if Pokemon.find_by(name: pokemon_name)
       @pokemon = Pokemon.find_by(name: pokemon_name)
@@ -19,7 +25,7 @@ class PokemonsController < ApplicationController
       @pokemon.save
     end
 
-    if params[:name]
+    if params[:contiguious] or params[:name]
       redirect_to pokemon_path(@pokemon.name)
     end
   end

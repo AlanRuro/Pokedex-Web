@@ -1,1 +1,27 @@
-<%= render partial: "pokedex", locals: { pokemon: @pokemon, show_content: true }%>
+<%= content_for :screen do %>
+    <h1><%= @pokemon.name %></h1>
+    <img src=<%= @pokemon.image %> />
+    <ul class="no-bullets">
+        <li>Height <%= @pokemon.height %> </li>
+        <li>Weight <%= @pokemon.weight %> </li>
+        <li>Base Experience <%= @pokemon.base_experience %> </li>
+    </ul>
+<% end %>
+<%= content_for :buttons do %>
+    <%= form_with(method: :get) do |form| %>
+        <div class="search">
+            <%= form.hidden_field :contiguious, value: params[:id] %>
+            <%= form.hidden_field :difference, value: -1 %>
+            <%= form.submit "", class: "green-large-button" %>
+        </div>
+    <% end %>
+
+    <%= form_with(method: :get) do |form| %>
+        <div class="search">
+            <%= form.hidden_field :contiguious, value: params[:id] %>
+            <%= form.hidden_field :difference, value: 1 %>
+            <%= form.submit "", class: "yellow-large-button" %>
+        </div>
+    <% end %>
+<% end %>
+<%= render "pokedex" %>
